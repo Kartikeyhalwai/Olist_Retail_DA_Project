@@ -2,6 +2,7 @@ USE CATALOG olist_retail;
 USE SCHEMA gold_dataset;
 CREATE OR REPLACE TABLE GOLD_DATASET.customer_behavior AS
 
+-- NEW VS REPEAT CUSTOMER
 SELECT
     customer_unique_id,
     COUNT(DISTINCT order_id) AS total_orders,
